@@ -1,6 +1,6 @@
 class SightingSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :created_at
+  attributes :created_at, :bird, :location
   ApplicationController
   def show
     sighting = Sighting.find(params[:id])
