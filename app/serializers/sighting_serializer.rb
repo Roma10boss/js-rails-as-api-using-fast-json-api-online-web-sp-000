@@ -3,6 +3,7 @@ class SightingSerializer
   attributes :created_at
   belongs_to :bird
   belongs_to :location
+  
   def show
     sighting = Sighting.find(params[:id])
     render json: SightingSerializer.new(sighting)
